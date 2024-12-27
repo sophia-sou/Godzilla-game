@@ -9,6 +9,11 @@ public class GodzillaMovement : MonoBehaviour
     public float godzilla_ySpeed;
     public float godzilla_ySprint;
 
+    private Animator animator;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public Rigidbody2D rb;
     void Update()
@@ -36,5 +41,29 @@ public class GodzillaMovement : MonoBehaviour
         Vector2 velocity = new Vector2(direction.x*xSpeed, direction.y*ySpeed);
 
         rb.linearVelocity = velocity;
+
+        // Play Attack animation when the Space key is pressed
+        // trigger parameter
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetTrigger("Attack");
+        }
+
+        // Play Kick animation when the Right Mouse Button is clicked
+        if (Input.GetButtonDown("Fire2"))
+        {
+            animator.SetTrigger("Kick");
+        }
+
+        // Play isWalking animation when walking (or running) 
+        // bool parameter
+        if(xInput != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 }

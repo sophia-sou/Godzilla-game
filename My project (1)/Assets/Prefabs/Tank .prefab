@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 2443485541372043036}
   - component: {fileID: 7408667992930392492}
   - component: {fileID: 64683852975178464}
+  - component: {fileID: 5800623349204255659}
+  - component: {fileID: -5001073814075248202}
   m_Layer: 0
   m_Name: 'Tank '
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,14 +145,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164968353673248981}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -158,10 +160,119 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!60 &5800623349204255659
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164968353673248981}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.3, y: 1.29}
+    newSize: {x: 2.3, y: 1.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.96, y: 0.015}
+      - {x: 0.65, y: 0.005}
+      - {x: 0.7, y: 0.225}
+      - {x: 0.41, y: 0.405}
+      - {x: 0.35999998, y: 0.645}
+      - {x: 0.29999998, y: 0.645}
+      - {x: 0.28, y: 0.635}
+      - {x: 0.11, y: 0.285}
+      - {x: -0.089999996, y: 0.285}
+      - {x: -0.29999998, y: 0.21499999}
+      - {x: -1.1, y: 0.185}
+      - {x: -1.15, y: 0.105}
+      - {x: -1.15, y: 0.024999999}
+      - {x: -1.12, y: -0.005}
+      - {x: -0.59, y: -0.015}
+      - {x: -0.83, y: -0.074999996}
+      - {x: -0.9, y: -0.114999995}
+      - {x: -1.02, y: -0.205}
+      - {x: -1.06, y: -0.355}
+      - {x: -0.84, y: -0.59499997}
+      - {x: -0.76, y: -0.645}
+      - {x: 0.96999997, y: -0.645}
+      - {x: 1.09, y: -0.49499997}
+      - {x: 1.15, y: -0.305}
+      - {x: 1.15, y: -0.145}
+  m_UseDelaunayMesh: 0
+--- !u!70 &-5001073814075248202
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164968353673248981}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.3, y: 1.2899998}
+  m_Direction: 1
 --- !u!1 &9149480356344343778
 GameObject:
   m_ObjectHideFlags: 0
