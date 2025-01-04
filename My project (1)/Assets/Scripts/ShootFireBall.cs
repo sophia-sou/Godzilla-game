@@ -13,10 +13,12 @@ public class ShootFireBall : MonoBehaviour
         {
             Shoot();
         }
+
+       
     }
 
-    void Shoot ()
-    {
-        Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+    void Shoot()
+    { 
+            Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
     }
 }
