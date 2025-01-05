@@ -29,7 +29,7 @@ public class GodzillaChangeLayer : MonoBehaviour
         if (GodjillaLevel.transform.position.y >= Top.transform.position.y) 
         {
             ChangeLayer(LayerMask.NameToLayer(layer8));
-            Debug.Log(layer8);
+           
         }
         else if (GodjillaLevel.transform.position.y <= Top.transform.position.y && GodjillaLevel.transform.position.y >= Mid.transform.position.y)
         {

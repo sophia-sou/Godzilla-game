@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498271de588398148ac41a5243a3f139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 7279068519600387461, guid: 640ed919eea02da43a986f3a40827d96, type: 3}
   fireSpeed: 7
   rb: {fileID: 7092498855608587670}
-  ii: 1
+  Godzilla: Godzilla

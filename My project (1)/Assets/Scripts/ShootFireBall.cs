@@ -18,7 +18,7 @@ public class ShootFireBall : MonoBehaviour
     }
 
     void Shoot()
-    { 
-            Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+    { //makes the fireball child of godzilla
+        GameObject newChild =Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
     }
 }
