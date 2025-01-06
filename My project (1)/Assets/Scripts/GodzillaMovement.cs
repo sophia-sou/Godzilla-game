@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class GodzillaMovement : MonoBehaviour
 {
+   
     public float godzilla_xSpeed;
     public float godzilla_xSprint;
     public float godzilla_ySpeed;
@@ -57,7 +59,7 @@ public class GodzillaMovement : MonoBehaviour
 
         // Play isWalking animation when walking (or running) 
         // bool parameter
-        if(xInput != 0)
+        if(xInput != 0||yInput !=0)
         {
             animator.SetBool("isWalking", true);
         }
@@ -65,5 +67,21 @@ public class GodzillaMovement : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+
+
+        //change of animations direction
+        if (xInput != 0)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * Mathf.Sign(xInput);
+            transform.localScale = localScale;
+           
+
+            foreach (Transform child in transform)
+            {
+                child.transform.localScale = localScale;
+            }
+        }
     }
+    
 }
