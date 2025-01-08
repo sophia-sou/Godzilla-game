@@ -19,7 +19,7 @@ public class LaserShoot : MonoBehaviour
 
         if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
         {
-            DestroyLaser(); 
+            DestroyLaser();
         }
     }
 

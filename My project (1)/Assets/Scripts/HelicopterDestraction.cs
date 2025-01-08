@@ -5,11 +5,19 @@ using UnityEngine;
 public class HelicopterDestraction : MonoBehaviour
 {//DEN DOYLEYEI
     public GameObject fireball;
-    private void OnCollisionEnter(Collision collision)
+
+    Rigidbody2D rb;
+    private void Start()
     {
-        if (collision.collider.name==fireball.name)
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       // Debug.Log("nn");
+        if (collision.collider.name.Contains(fireball.name))
         {
-            Debug.Log("mlkkkkk");
+            //Debug.Log("1");
+            Destroy(gameObject);
         }
     }
 

@@ -4,23 +4,24 @@ using System.Collections.Generic;
 
 public class GodzillaHealth : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
+    public GameObject tankLaser;
 
     // starting health value
     public int health = 100;
 
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collision detected with: " + other.gameObject.name);
+        Debug.Log("Collision detected with: " /* + other.gameObject.name*/);
 
         // decrease health if collision with bullet (Laser To Be) 
-        if (other.gameObject.CompareTag("bullet"))
-        {
+        if (other.collider.name.Contains(tankLaser.name))
+            {
             health -= 10;
             Debug.Log("Godzilla hit by bullet! Health: " + health);
 

@@ -6,6 +6,7 @@ public class TankShoot : MonoBehaviour
     public float startShotTime;
     public GameObject tankLaser;
 
+
     void Start()
     {
         timeBetweenShots = startShotTime;
@@ -17,7 +18,10 @@ public class TankShoot : MonoBehaviour
         {
             //instantiate at enemy's (tank) current position
             //no roatation
-            Instantiate(tankLaser, transform.position, Quaternion.identity);
+            GameObject newChild = Instantiate(tankLaser, transform.position, Quaternion.identity);
+           
+            tankLaser.layer = gameObject.layer;
+
             timeBetweenShots = startShotTime;
         }
         else
